@@ -25,10 +25,10 @@ export default inject('store')(
                 <div>
                     <div className={`a-Layout-headerBar`}>
                         <div className="hidden-xs p-t-sm pull-right">
-                            <Button size="sm" className="m-r-xs" level="success" disabled disabledTip="Todo...">
+                            <Button size="lg" className="m-r-xs" level="success" disabled disabledBottom="Todo...">
                                 全部导出
                             </Button>
-                            <Button size="sm" level="info" onClick={() => store.setAddPageIsOpen(true)}>
+                            <Button size="lg" level="info" onClick={() => store.setAddPageIsOpen(true)}>
                                 新增页面
                             </Button>
                         </div>

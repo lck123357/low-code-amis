@@ -5,6 +5,8 @@ import axios from 'axios';
 import {MainStore} from './store/index';
 import RootRoute from './route/index';
 import copy from 'copy-to-clipboard';
+import { ConfigProvider } from 'antd'
+import zhCN from 'antd/lib/locale/zh_CN'
 
 export default function(): JSX.Element {
     const store = ((window as any).store = MainStore.create(
@@ -53,8 +55,10 @@ export default function(): JSX.Element {
     ));
 
     return (
+      // <ConfigProvider locale={zhCN}>
         <Provider store={store}>
             <RootRoute store={store} />
         </Provider>
+      // </ConfigProvider>
     );
 }

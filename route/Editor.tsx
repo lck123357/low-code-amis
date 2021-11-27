@@ -6,6 +6,8 @@ import {RouteComponentProps} from 'react-router-dom';
 import {Layout, Switch, classnames as cx, toast} from 'amis';
 import '../renderer/MyRenderer';
 import '../editor/MyRenderer';
+import '../renderer/MyInput'
+import '../editor/MyInput'
 
 let currentIndex = -1;
 
@@ -54,7 +56,7 @@ export default inject('store')(
                         />
                     </div>
 
-                    <div className="editor-preview">
+                    {/* <div className="editor-preview">
                         移动端{' '}
                         <Switch
                             value={store.isMobile}
@@ -62,7 +64,7 @@ export default inject('store')(
                             className="m-l-xs"
                             inline
                         />
-                    </div>
+                    </div> */}
 
                     <div className="editor-header-btns">
                         <div className={cx('btn-item')} onClick={save}>
