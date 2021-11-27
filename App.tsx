@@ -7,6 +7,7 @@ import RootRoute from './route/index';
 import copy from 'copy-to-clipboard';
 import { ConfigProvider } from 'antd'
 import zhCN from 'antd/lib/locale/zh_CN'
+import './App.scss'
 
 export default function(): JSX.Element {
     const store = ((window as any).store = MainStore.create(
@@ -56,9 +57,11 @@ export default function(): JSX.Element {
 
     return (
       // <ConfigProvider locale={zhCN}>
+      <div className='App'>
         <Provider store={store}>
             <RootRoute store={store} />
         </Provider>
+      </div>
       // </ConfigProvider>
     );
 }

@@ -163,8 +163,10 @@
         // init module
         //
         var factory = factoryMap[id];
-        if (!factory) {
+        if (id !== 'index.html') { // 不知道npm包内为什么require(index.html)
+          if (!factory) {
             throw '[ModJS] Cannot find module `' + id + '`';
+          }
         }
 
         mod = modulesMap[id] = {
