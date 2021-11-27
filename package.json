@@ -1,7 +1,7 @@
 {
-    "name": "amis-editor-demo",
+    "name": "low-code-amis",
     "version": "1.0.0",
-    "description": "amis 可视化编辑器",
+    "description": "基于amis二次封装的 可视化编辑器",
     "main": "index.js",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
@@ -18,7 +18,7 @@
         "amis",
         "editor"
     ],
-    "author": "fex",
+    "author": "lck",
     "license": "ISC",
     "bugs": {
         "url": "https://github.com/fex-team/amis-editor-demo/issues"
