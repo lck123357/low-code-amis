@@ -2,8 +2,6 @@ import {Renderer} from 'amis';
 import { RendererProps } from 'amis/lib/factory';
 import React, { useState } from 'react';
 import { Input, Button } from 'antd'
-import { number } from 'mobx-state-tree/dist/internal';
-import { size } from 'lodash';
 // import { NumberInput, Button } from  'amis/lib/components/index'
 
 export interface myInputProps extends RendererProps {
