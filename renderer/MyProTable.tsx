@@ -16,12 +16,7 @@ export interface myProTableProps extends RendererProps {
 
 export default class MyProTable extends React.Component<myProTableProps> {
   static defaultProps = {
-    columns: [
-      {
-        title: '版本名称',
-        dataIndex: 'name'
-      }
-    ]
+    columns: []
   }
 
   constructor(props: any) {
