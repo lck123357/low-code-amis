@@ -30,42 +30,6 @@ export class MyProTable extends BasePlugin {
             type: 'tabs',
             tabs: [
                 {
-                    title: '列表字段配置',
-                    controls: [
-                      {
-                        type: 'input-table',
-                        name: 'columns',
-                        addable: true,
-                        editable: true,
-                        columns: [
-                          {
-                            label: '字段参数',
-                            name: 'dataIndex'
-                          },
-                          {
-                            label: '字段名',
-                            name: 'title'
-                          },
-                          {
-                            label: '是否搜索',
-                            name: 'search',
-                            type: 'select',
-                            options: [
-                              {
-                                label: '是',
-                                value: true
-                              },
-                              {
-                                label: '否',
-                                value: false
-                              }
-                            ]
-                          }
-                        ]
-                      }
-                    ]
-                },
-                {
                     title: '数据源',
                     controls: [
                         {
@@ -74,10 +38,49 @@ export class MyProTable extends BasePlugin {
                           type: 'text'
                         },
                         {
-
+                          name: 'method',
+                          label: '请求方式',
+                          type: 'select',
+                          options: ['get', 'post']
                         }
                     ]
-                }
+                },
+                {
+                  title: '列表字段配置',
+                  controls: [
+                    {
+                      type: 'input-table',
+                      name: 'columns',
+                      addable: true,
+                      editable: true,
+                      columns: [
+                        {
+                          label: '字段参数',
+                          name: 'dataIndex'
+                        },
+                        {
+                          label: '字段名',
+                          name: 'title'
+                        },
+                        {
+                          label: '是否搜索',
+                          name: 'search',
+                          type: 'select',
+                          options: [
+                            {
+                              label: '是',
+                              value: true
+                            },
+                            {
+                              label: '否',
+                              value: false
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+              },
             ]
         }
     ];
