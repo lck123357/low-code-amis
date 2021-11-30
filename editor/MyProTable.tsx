@@ -53,6 +53,7 @@ export class MyProTable extends BasePlugin {
                       name: 'columns',
                       addable: true,
                       editable: true,
+                      removable: true,
                       columns: [
                         {
                           label: '字段参数',
@@ -76,6 +77,32 @@ export class MyProTable extends BasePlugin {
                               value: false
                             }
                           ]
+                        },
+                        {
+                          label: '渲染器',
+                          name: 'valueType',
+                          type: 'select',
+                          options: ['date', 'dateRange', 'digit']
+                        }
+                      ]
+                    },
+                    {
+                      type: 'input-table',
+                      name: 'actions',
+                      addable: true,
+                      editable: true,
+                      removable: true,
+                      columns: [
+                        {
+                          label: '操作项',
+                          name: 'title',
+                          type: 'text'
+                        },
+                        {
+                          label: '按钮样式',
+                          name: 'type',
+                          type: 'select',
+                          options: ['primary', 'link', 'dashed']
                         }
                       ]
                     }
