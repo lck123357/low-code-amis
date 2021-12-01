@@ -34,15 +34,26 @@ export class MyProTable extends BasePlugin {
                     controls: [
                         {
                           name: 'url',
-                          label: '接口',
+                          label: '列表接口',
                           type: 'text'
                         },
+                        // {
+                        //   name: 'method',
+                        //   label: '请求方式',
+                        //   type: 'select',
+                        //   options: ['get', 'post']
+                        // },
                         {
-                          name: 'method',
-                          label: '请求方式',
-                          type: 'select',
-                          options: ['get', 'post']
-                        }
+                          name: 'deleteUrl',
+                          label: '删除接口',
+                          type: 'text'
+                        },
+                        // {
+                        //   name: 'deleteMethod',
+                        //   label: '删除请求方式',
+                        //   type: 'select',
+                        //   options: ['get', 'post']
+                        // }
                     ]
                 },
                 {
