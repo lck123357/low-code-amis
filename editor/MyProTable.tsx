@@ -30,6 +30,49 @@ export class MyProTable extends BasePlugin {
             type: 'tabs',
             tabs: [
                 {
+                  title: '动作操作',
+                  controls: [
+                    {
+                      name: 'isEdit',
+                      label: '编辑',
+                      type: 'checkbox',
+                      option: '是否编辑'
+                    },
+                    {
+                      name: 'isShow',
+                      label: '查看',
+                      type: 'checkbox',
+                      option: '是否查看'
+                    },
+                    {
+                      name: 'isDelete',
+                      label: '查看',
+                      type: 'checkbox',
+                      option: '是否编辑'
+                    },
+                    {
+                      type: 'input-table',
+                      name: 'actions',
+                      addable: true,
+                      editable: true,
+                      removable: true,
+                      columns: [
+                        {
+                          label: '操作项',
+                          name: 'title',
+                          type: 'text'
+                        },
+                        {
+                          label: '按钮样式',
+                          name: 'type',
+                          type: 'select',
+                          options: ['primary', 'link', 'dashed']
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
                     title: '数据源',
                     controls: [
                         {
@@ -93,27 +136,12 @@ export class MyProTable extends BasePlugin {
                           label: '渲染器',
                           name: 'valueType',
                           type: 'select',
-                          options: ['date', 'dateRange', 'digit']
-                        }
-                      ]
-                    },
-                    {
-                      type: 'input-table',
-                      name: 'actions',
-                      addable: true,
-                      editable: true,
-                      removable: true,
-                      columns: [
-                        {
-                          label: '操作项',
-                          name: 'title',
-                          type: 'text'
+                          options: ['date', 'dateRange', 'digit', 'input']
                         },
                         {
-                          label: '按钮样式',
-                          name: 'type',
-                          type: 'select',
-                          options: ['primary', 'link', 'dashed']
+                          label: '在编辑中展示',
+                          name: 'isEditShow',
+                          type: 'checkbox'
                         }
                       ]
                     }
