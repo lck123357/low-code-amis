@@ -1,5 +1,6 @@
 import { Modal, Form, DatePicker, InputNumber, Input } from 'antd'
 import React, { FC } from 'react'
+import moment from 'moment'
 
 const { Item } = Form
 const { RangePicker } = DatePicker
@@ -28,8 +29,12 @@ const CommonModal: FC<ModalProps> = ({
       visible={visible}
       onCancel={onCancel}
       title='编辑'
+      destroyOnClose
     >
-      <Form initialValues={info}>
+      <Form initialValues={{
+        ...info,
+        created_at: moment(info.created_at)
+      }}>
         {
           FormItems?.map(({
             title,
