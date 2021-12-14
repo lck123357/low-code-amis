@@ -8,6 +8,8 @@ import '../renderer/MyRenderer';
 import '../editor/MyRenderer';
 import '../renderer/MyInput'
 import '../editor/MyInput'
+import '../editor/MyProTable'
+import '../renderer/MyProTable'
 
 let currentIndex = -1;
 
